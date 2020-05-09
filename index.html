@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulaire</title>
+      <script>
+                    function validation()
+            {
+                var nom = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var valide = true;
+                if(isNaN(password))
+                {
+                    alert("Vérifier si Le Mot de Passe est Numérique");
+                    valide=false;
+                }
+                if(nom =="" ||  password == "")
+                {
+                    alert("Veuillez Remplir les Champs obligatoires  User-Name , User-Password");
+                    valide=false;
+                
+                }
+            
+                return valide;
+                
+            }
+      </script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <center><h1>Veuillez remplir le formaulaire suivant : </h1></center>
+        <form action="#" method="POST" onsubmit="return validation()">
+            <fieldset title="informations Personelles">
+                <legend>informations Personelles:</legend>
+                <label for="nom"> Nom:</label>
+                <input type="text" id="nom" placeholder="Saisir votre Nom"> <br/>
+          
+                <label for="prenom"> Prénom:</label>
+                <input type="text" id="prenom" placeholder="Saisir votre Prénom"><br/>
+        
+                <label>Sexe:</label><br/>
+                
+                <input type="radio" name="sexe" value="Masculin" id="Masculin" checked >
+                <label for="Masculin">Masculin</label><br/>
+                <input type="radio" name="sexe" value="Feminin" id="Feminin">
+                <label for="Masculin">Feminin</label><br/>
+               
+                <label>Date </label>
+                <input type="date"><br/>
+               
+                <label for="Lieu">Lieu de Naissance:</label>
+                <input type="text" id="Lieu"> <br/>
+             
+                <label for="nombre">Nombre de Frères et Soeurs:</label>
+                <input type="number" id="nombre" value="0" min="0"> <br/>
+             
+                <label for="adresse">Adresse:</label><br/>
+                <textarea id="adresse" rows="10" cols="50" placeholder="Saisir votre adresse"></textarea> <br/>
+
+                <label for="num_tel">Num téléphone: </label>
+                <input type="tel" id="num_tel"><br/>
+
+                <label for="email">Email</label>
+                <input type="email" id="email"><br/>
+           
+            </fieldset>
+            <fieldset>
+                <legend>informations d'authentification:</legend>
+
+                <label for="username">User-Name</label>
+                <input type="text" id="username"><br/>
+
+                <label for="password" aria-required="true">User-Password</label>
+                <input type="password" id="password" aria-required="true"><br/>
+            </fieldset><br/>
+
+            <fieldset>
+                <legend>Divers:</legend>
+                <label for="centre_interet">Vos centres d'intérets:</label><br/>
+                <input type="checkbox" id="cuisine" name="centre_interet" value="cuisine">
+                <label for="cuisine">cuisine</label><br/>
+                <input type="checkbox" id="dessin" name="centre_interet" value="dessin">
+                <label for="dessin">dessin</label><br/>
+                <input type="checkbox" id="lecture" name="centre_interet" value="lecture">
+                <label for="lecture">lecture</label><br/>
+                <input type="checkbox" id="musique" name="centre_interet" value="musique">
+                <label for="musique">musique</label><br/>
+               
+                <label for="color1">Votre Couleur Préférée</label><br/>
+                <select name="color1" id="color1">
+                    <option value="Blue">Blue</option>
+                    <option value="Rose">Rose</option>
+                    <option value="Rouge">Rouge</option>
+                    <option value="Noir">Noir</option>
+                </select><br/>
+
+                <label for="color2">autres Couleurs que vous aimez bien: </label><br/>
+                <select name="color2" size="3"><br/>
+                <option value="Blanc">Blanc</option>
+                <option value="Orange">Orange</option>
+                <option value="Gris">Gris</option>
+                <option value="Blue-ciel">Blue-ciel</option>
+                <option value="Blue-roi">Blue-roi</option>
+            </select><br/>
+                <label for="color3">Sélectionnez votre couleur Préférée</label><br/>
+                <input type="color" name="color3" id="color3"><br/>
+            </fieldset>
+            <h3>Boutton de reinitialisation</h3>
+        <button type="reset">Retablir</button>
+        <h3>Boutton de soumission</h3>
+    <button type="submit" onclick="return validation()">Envoyer</button>
+        </form>
+        
+        </body>
+</html>
