@@ -1,3 +1,2 @@
-# JS-TP
-university home work (a form)
+university home work (a form to fill)
 
